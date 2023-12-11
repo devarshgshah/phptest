@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Contact page</title>
+  <style>
+    /* Reset and Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Container Styles */
+    .container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      max-width: 800px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+      overflow: hidden; /* Prevent container from expanding due to long text */
+    }
+
+    .form-container {
+      flex: 1;
+      padding: 20px;
+    }
+
+    /* Form Styles */
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      /* Add styles for the form here */
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .submit-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      text-decoration: none;
+      background-color: royalblue;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-flex;
+      text-align: center;
+      align-items: center;
+    }
+
+    /* Image Container Styles */
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 10px;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-container">
+      <form>
+        <h1>Contact Me</h1>
+        <label for="tName">Name:</label>
+        <input type="text" id="tName" required placeholder="Your Name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required placeholder="Your Email id">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" rows="5" name="msg" placeholder="Enter your message"></textarea>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+    <div class="image-container">
+      <img src="img.jpg" alt="Profile Image" class="image">
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <h1>Reach Us</h1>
+      <ul class="social-icons">
+        <li><a href="https://www.linkedin.com/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://github.com/your-github-profile" target="_blank"><i class="fab fa-github"></i></a></li>
+        <li><a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a></li>
+      </ul>
+      <p>Devarsh Shah</p>
+      <p><i class="fas fa-envelope"></i> Devarshshah2957@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt fa-lg"></i> Vallabh Vidhyanagar, G.O Shah Jain Hostel, 388001</p>
+      <p><i class="fab fa-linkedin-in"></i> Devarsh Shah</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Function to toggle between light mode and dark mode
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+    }
+
+    // Function to toggle the mobile menu
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

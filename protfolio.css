@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+  
+    background-color:rgb(0, 0, 33);
+    color: white;
+    font-family: 'poppins',sans-serif;
+  }
+  nav{
+      display:flex;
+      justify-content: space-around;
+      align-items:center;
+      height: 80px;
+      
+      
+      background-color: rgb(30, 20, 32);
+      
+  }
+  nav ul{
+          display: flex;
+          justify-content: center;
+  }
+  nav ul li{
+              list-style: none;
+              
+              margin: 0 23px;
+  }
+  nav ul li a{
+              text-decoration: none;
+              color: white;
+  }
+
+  nav ul li a:hover{
+
+        color:red;
+        font-size: 1.0rem;
+  }
+  .left{
+        font-size: 2rem;
+  }
+  .firstsection {
+                display:flex;
+                justify-content:space-around;
+                margin: 70px 0;
+  } 
+  .leftsection{
+
+    margin: 30px 0;
+    
+    
+    font-size:3rem;
+    
+} 
+  .firstsection > div{
+                      display: flex;
+                      width: 30%;
+                      background-color: brown;
+                      justify-content: space-around;
+                      margin: 23px 0;
+  }
+  rightsection img{
+                    
+               height: 700px;
+              width: 500px;
+              right: 10px;
+               padding-left: 40px;
+               /*position: relative;*/
+               margin-bottom: 100px;
+              margin-top: 10px;
+  }
+  .purple{
+      color: rebeccapurple;
+  }
+  .bu{
+      text-align: center;
+      align-items: center;
+      border-radius: 15px;
+      font-size: large;
+      justify-content: space-around;
+
+  }
+  .akshi{
+          border-radius: 15px;
+          font-size: large;
+          align-items: center;
+  }
+
+  .footer{
+           bottom: 0px;
+           width: 100%;
+           height: auto;
+           background-color:blue;
+          /* text-align: center;*/
+           position: fixed;
+          
+
+  }
+  h1{
+      text-align: center;
+  }
+  .social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-icons li {
+    margin: 0 10px;
+  }
+  

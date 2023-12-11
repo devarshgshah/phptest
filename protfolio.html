@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devarsh Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+    /* CSS styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Light mode */
+    body.light-mode {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    /* Dark mode */
+    body.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0;
+      
+    }
+
+    .logo {
+      font-size: 20px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+      color: #ccc;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .menu li a:hover {
+      color: #ccc;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 50px 0;
+    }
+
+    .rightsection {
+      flex: 1;
+      max-width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .first {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .leftsection {
+      flex: 1;
+      font-size: 24px;
+      line-height: 1.5;
+    }
+
+    .purple {
+      color: royalblue;
+    }
+
+    .bu,
+    .akshi {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      text-decoration: none;
+      background-color:royalblue;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .bu:hover{
+                color: #333;
+    }
+
+    .akshi {
+      background-color: #333;
+    }
+
+    .akshi a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .akshi a:hover {
+      color: #ccc;
+    }
+
+    .section {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .section ul li {
+      width: 100%;
+      max-width: 300px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section ul li i {
+      font-size: 48px;
+      color: royalblue;
+      margin-bottom: 10px;
+    }
+
+    .section ul li h3 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .footer h1 {
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .social-icons li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .social-icons li a:hover {
+      color: #ccc;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: royalblue;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 999;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    @media screen and (max-width: 768px) {
+      .logo {
+        font-size: 18px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: 5;
+        width: 100%;
+        padding: 10px;
+      }
+
+      .menu li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">Devarsh Portfolio</div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="/">Services</a></li>
+        <li><a href="/">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="rightsection">
+      <img src="shah.jpg" alt="">
+    </div>
+    <section class="first">
+      <div class="leftsection">
+        <h2>HI, My name is <span class="purple">Devarsh Shah</span></h2>
+        <p>I am a B.C.A Student</p>
+        <button class="bu">Download CV</button>
+        <button class="akshi"><a href="contact.html">Contact Me</a></button>
+      </div>
+    </section>
+  </main>
+
+  <section class="section" id="services">
+    <h2>Services</h2>
+    <p>Here are some of the services I offer:</p>
+    <ul>
+      <li>
+        <i class="fas fa-paint-brush"></i>
+        <h3>UI/UX Design</h3>
+        <p>I create visually appealing and intuitive user interfaces to enhance the user experience.</p>
+      </li>
+      <li>
+        <i class="fas fa-chart-line"></i>
+        <h3>SEO Optimization</h3>
+        <p>I optimize websites to improve their search engine rankings and increase organic traffic.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <img src="project1.jpg" alt="Project 1">
+        <h3>Project 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </li>
+      <li>
+        <img src="project2.jpg" alt="Project 2">
+        <h3>Project 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </li>
+      <li>
+        <img src="project3.jpg" alt="Project 3">
+        <h3>Project 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="footer">
+      <h1>Reach Us</h1>
+      <ul class="social-icons">
+        <li><a href="www.linkedin.com/in/devarsh-shah-415377257" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://github.com/your-github-profile" target="_blank"><i class="fab fa-github"></i></a></li>
+        <li><a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a></li>
+      </ul>
+      <p>Devarsh Shah</p>
+      <p><i class="fas fa-envelope"></i> Devarshshah2957@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt fa-lg"></i> Vallabh Vidhyanagar, G.O Shah Jain Hostel, 388001</p>
+      <p><i class="fab fa-linkedin-in"></i> Devarsh Shah</p>
+    </div>
+  </footer>
+
+  <button class="toggle-btn" onclick="toggleDarkMode()">
+    <i class="fas fa-adjust"></i>
+  </button>
+
+  <script>
+    // Function to toggle between light mode and dark mode
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle('light-mode');
+      body.classList.toggle('dark-mode');
+    }
+
+    // Function to toggle the mobile menu
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>
